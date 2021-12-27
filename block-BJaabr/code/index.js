@@ -10,25 +10,29 @@ Do the following for the given problem:
 function convertToString(n) {
   return String(n);
 }
+convertToString(10);
 
 // - Write a Function Expression
 let convertToString = function (n) {
   return String(n);
 };
+convertToString(10);
 
 // - Write an Arrow Function without curly brackets (if possible)
-let convertToString = (n) => String(n);
+let convertToString = n => String(n);
+convertToString(10);
 
 // - Write an Arrow Function with curly brackets
-let convertToString = (n) => {
+let convertToString = n => {
   return String(n);
 };
+convertToString(10);
 
 // - Execute the function
-convertToString(21);
+convertToString(10);
 
 // - Execute the function and store the return value in a variable.
-let returnValue = convertToString(23);
+let returnValue = convertToString(10);
 
 // - What is the typeof returnValue
 // typeof returnValue is "string"
@@ -42,11 +46,28 @@ Do the following with above problem.
 
 // - Write a Function Declaration
 
+function addOne(number) {
+  return returnValue + number;
+}
+addOne(1);
+
 // - Write a Function Expression
+
+const addValue = function addOne(number) {
+  return returnValue + number;
+};
+addValue(1);
 
 // - Write an Arrow Function without curly brackets(if possible)
 
+const addValue = number => returnValue + number;
+addValue(1);
+
 // - Write an Arrow Function with curly brackets
+const addValue = number => {
+  return returnValue + number;
+};
+addValue(1);
 
 // - Execute the function
 
@@ -63,11 +84,28 @@ Do the following with above problem.
 
 // - Write a Function Declaration
 
+function substractOne(num) {
+  return num - 1;
+}
+substractOne(50);
+
 // - Write a Function Expression
 
+const subtractNum = function subtractOne(num) {
+  return num - 1;
+};
+subtractNum(100);
 // - Write an Arrow Function without curly brackets(if possible)
 
+const subtractNum = num => num - 1;
+subtractNum(200);
+
 // - Write an Arrow Function with curly brackets
+
+const subtractNum = num => {
+  return num - 1;
+};
+subtractNum(500);
 
 // - Execute the function
 
@@ -83,12 +121,29 @@ Do the following with above problem.
 */
 
 // - Write a Function Declaration
+function sum(numA, numB) {
+  return numA + numB;
+}
+sum(20, 30);
 
 // - Write a Function Expression
 
+const addNum = function sum(numA, numB) {
+  return numA + numB;
+};
+addNum(10, 50);
+
 // - Write an Arrow Function without curly brackets(if possible)
 
+const addNum = (numA, numB) => numA + numB;
+addNum(100, 200);
+
 // - Write an Arrow Function with curly brackets
+
+const addNum = (numA, numB) => {
+  return numA + numB;
+};
+addNum(400, 500);
 
 // - Execute the function
 
@@ -104,13 +159,28 @@ Do the following with above problem.
 */
 
 // - Write a Function Declaration
+function square(num) {
+  return num ** 2;
+}
+square(5);
 
 // - Write a Function Expression
 
+const makeSquare = function square(num) {
+  return num ** 2;
+};
+makeSquare(8);
+
 // - Write an Arrow Function without curly brackets(if possible)
 
-// - Write an Arrow Function with curly brackets
+const makeSquare = num => num ** 2;
+makeSquare(9);
 
+// - Write an Arrow Function with curly brackets
+const makeSquare = num => {
+  return num ** 2;
+};
+makeSquare(11);
 // - Execute the function
 
 // - Execute the function and store the return value in a variable
@@ -126,12 +196,42 @@ Do the following with above problem.
 
 // - Write a Function Declaration
 
+function isGrater(numX, numY) {
+  if (numX > numY) {
+    return `True`;
+  } else {
+    return `False`;
+  }
+}
+isGrater(5, 9);
+
 // - Write a Function Expression
+
+const grater = function isGrater(numX, numY) {
+  if (numX > numY) {
+    return `True`;
+  } else {
+    return `False`;
+  }
+};
 
 // - Write an Arrow Function without curly brackets(if possible)
 
-// - Write an Arrow Function with curly brackets
+const grater = (numX, numY) => numX > numY;
+return `true`;
+numX < numY;
+return `false`;
+grater(100, 200);
 
+// - Write an Arrow Function with curly brackets
+const grater = (numX, numY) => {
+  if (numX > numY) {
+    return `True`;
+  } else {
+    return `false`;
+  }
+};
+grater(22, 23);
 // - Execute the function
 
 // - Execute the function and store the return value in a variable
@@ -149,14 +249,50 @@ Do the following with above problem.
 */
 
 // - Write a Function Declaration
-
+function oddOrEven(num) {
+  if (num % 2 === 0) {
+    return `${num} is  an even number`;
+  } else {
+    return `${num} is a odd number`;
+  }
+}
+oddOrEven(18);
 // - Write an anonymous Function Expression
+
+const findOddEven = function (num) {
+  if (num % 2 === 0) {
+    return `${num} is an even number`;
+  } else {
+    return `${num} is an odd number`;
+  }
+};
+findOddEven(19);
 
 // - Write an named Function Expression
 
+const findOddEven = num => {
+  if (num % 2 === 0) {
+    return `${num}is an even number`;
+  } else {
+    return `${num}is an number`;
+  }
+};
+findOddEven(36);
+
 // - Write an Arrow Function without curly brackets (hint: use ternary operator)
+const findOddEven = num =>
+  num % 2 === 0 ? `${num} is an even number` : `${num}is an odd number`;
+findOddEven(55);
 
 // - Write an Arrow Function with curly brackets
+const findOddEven = num => {
+  if (num % 2 === 0) {
+    return `${num}is an even number`;
+  } else {
+    return `${num} is an odd number`;
+  }
+};
+findOddEven(44);
 
 // - Execute the function
 
