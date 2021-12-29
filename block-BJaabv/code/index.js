@@ -8,10 +8,10 @@
   * [ ] Add an additional argument to the function that takes the conversion rate of human to dog years.
 */
 
-function calculateDogAge(humanAge, conversionRate) {
-  return humanAge * conversionRate;
+function calculateDogAge(puppyAge, conversionRate = 7) {
+  return puppyAge * conversionRate;
 }
-let dogAge = calculateDogAge(2, 7);
+let dogAge = calculateDogAge(2);
 
 /*
 2. 🎖Write a function named calculateMoviesToWatch that:
@@ -41,7 +41,7 @@ calculateMoviesToWatch(30, 1);
 
 function celsiusToFahrenheit(celsiusTemp) {
   let convertedTemp = (celsiusTemp * 9) / 5 + 32;
-  return `${convertedTemp}F is ${celsiusTemp}C`;
+  return `${convertedTemp}°F is ${celsiusTemp}°C`;
 }
 celsiusToFahrenheit(1);
 
@@ -53,7 +53,7 @@ celsiusToFahrenheit(1);
 
 function fahrenheitToCelsius(fahrenheit) {
   let convertedTemp = ((fahrenheit - 32) * 5) / 9;
-  return `${convertedTemp}c is ${fahrenheit}f`;
+  return `${convertedTemp}°C is ${fahrenheit}°F`;
 }
 fahrenheitToCelsius(33.8);
 
@@ -85,8 +85,22 @@ pow(-31, 2); // "The number below 1 is not allowed"
 and return sum or product of 1,…,n. If user enters any other value than `sum` or `product` alert `Not a valid Input`.
 */
 
-function sumOrProductOfN(n=0,m=4) {
-  if "sum"=
+function sumOrProductOfN(num, operation) {
+  if (operation === "sum") {
+    let sum = 0;
+    for (let i = 0; i <= num; i++) {
+      sum += i;
+    }
+    return sum;
+  } else if (operation === "product") {
+    let product = 1;
+    for (let i = 1; i <= num; i++) {
+      sum *= i;
+    }
+    return product;
+  } else {
+    alert("Not a valid Input");
+  }
 }
 
 sumOrProductOfN(4, "sum"); // 10
