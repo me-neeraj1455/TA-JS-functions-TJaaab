@@ -95,7 +95,7 @@ function sumOrProductOfN(num, operation) {
   } else if (operation === "product") {
     let product = 1;
     for (let i = 1; i <= num; i++) {
-      sum *= i;
+      product *= i;
     }
     return product;
   } else {
