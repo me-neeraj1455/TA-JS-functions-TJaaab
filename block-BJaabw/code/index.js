@@ -55,9 +55,9 @@ function calculateBMI(weight, height) {
   let bmi = weight / (height * height);
   if (bmi < 18.5) {
     return ` BMI is ${bmi} , Underweight`;
-  } else if (bmi >= 18.5 && bmi <= 24.9) {
+  } else if (bmi > 18.5 && bmi <= 24.9) {
     return `BMI is ${bmi} , Normal`;
-  } else if (bmi >= 25 && bmi <= 29.9) {
+  } else if (bmi > 25 && bmi <= 29.9) {
     return `BMI is ${bmi} , Overweight`;
   } else if (bmi >= 30) {
     return `BMI is ${bmi} , Obese`;
@@ -100,12 +100,11 @@ Twist is when user passes anything other than number, or string value you should
 */
 
 function sum(a, b) {
-  if (a === typeof ` ` && b === typeof ` `) {
-    let concat = a + b;
-    return concat;
-  } else if (a === typeof `number` && b === typeof `number`) {
-    let add = a + b;
-    return add;
+  // console.log(typeof a == "string ");
+  if (typeof a == "string" && typeof b == "string") {
+    return a + " " + b;
+  } else if (typeof a == "number" && typeof b == "number") {
+    return a + b;
   } else {
     return `Enter valid values`;
   }
@@ -113,7 +112,7 @@ function sum(a, b) {
 
 // Function Test
 sum(2, 4); // 4
-sum("Arya", "Stark"); // "Arya Stark"
+console.log(sum("Arya", "Stark")); // "Arya Stark"
 sum("Arya", 2); // Enter valid Values
 sum(null, 2); // Enter valid Values
-sum(undefined, 2); // Enter valid Values
+console.log(sum(undefined, 2)); // Enter valid Values
